@@ -2,6 +2,7 @@
 Alpha Testing Repo for MA Project Add In
 
 ## FUNCTIONALITY
+![Project Logo](./GUI.png)
 
 ### Button 1: Data Extraction to SQLite Database and Reporting
 This button extracts all significant project data—tasks, resources, calendars, assignments, costs, custom fields—from Microsoft Project and loads it into a temporary SQLite database. This database serves as the backend for subsequent analyses and operations, facilitating efficient data management and retrieval.
