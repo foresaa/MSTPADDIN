@@ -14,3 +14,5 @@ This button conducts an assurance exercise on the project data stored in the SQL
 This functionality performs a Bayesian analysis on the project schedule, optimizing start dates and durations based on probabilistic models. The system runs multiple trials (e.g., 100 for a pilot) and identifies the most likely optimized schedule. The optimized dates and durations are then input back into project custom fields, with variances calculated and displayed in a custom table view.
 ### Button 4: Custom PiViT Gantt Chart and MarkMap Visualizations
 This button allows the user to create a high-quality Gantt charts using Vega-Lite and a schedule tree using MarkMap. These visualizations are designed to be more professional and visually appealing than standard Microsoft Project charts, making them suitable for executive presentations. Users can preview the visuals before exporting them as SVG or PNG files. 
+
+[Link to Concept Document](./Project_Management_Task_Pane_Functionalities_Final_with_Placeholder.docx)
