@@ -47,7 +47,7 @@ body {
     background-image: url('https://foresaa.github.io/MSTPADDIN/Pink_Pilot.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-4;
 }
 
 /* Other styles */
