@@ -7,6 +7,13 @@ html, body {
     padding: 0;
 }
 
+/* Style for <p> elements */
+p {
+    font-size: 18px;  /* Adjust the font size as needed */
+    color: #000000;   /* Change the color to your preferred hex code */
+    line-height: 1.8; /* Optional: improves readability */
+}
+
 /* Task pane-specific styles */
 .task-pane {
     background-image: url('https://foresaa.github.io/MSTPADDIN/Help_320.png'); /* Replace with your image URL */
