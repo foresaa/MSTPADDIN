@@ -47,7 +47,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;  /* Ensure the background image fills the entire height */
+    height:auto;  /* Ensure the background image fills the entire height */
 }
 
 /* Other styles */
