@@ -1,7 +1,3 @@
-/* styles.css */
-
-
-
 /* Shared styles for both the landing page and the task pane */
 body {
     font-family: Arial, sans-serif;
@@ -22,7 +18,7 @@ body {
 .task-pane {
     background-color: #787171;
     background-image: url('https://foresaa.github.io/MSTPADDIN/Help.png');
-    background-size: cover;
+    background-size: 100% 100%; /* Ensures the image fills both width and height */
     background-position: center;
     background-repeat: no-repeat;
 }
