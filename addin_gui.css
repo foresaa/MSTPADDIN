@@ -101,12 +101,28 @@ footer {
     font-size: 0.9em;
     color: #555;
 
-    /* Align text to the left */
-.intro, .instructions {
-    text-align: left;
-    width: 40%;  /* Adjust this to make the text narrower and show more of the image */
-    margin-left: 20px;  /* Push the text away from the left edge slightly */
-}
+
+    .intro, .instructions {
+        text-align: left;
+        width: 40%;  /* Adjust this to control the width of the boxes */
+        margin-left: 20px;  /* Push the text slightly away from the left */
+        margin-top: 100px;  /* Add space above the boxes to move them down */
+        padding: 20px;  /* Padding inside the boxes */
+        background-color: rgba(120, 120, 120, 0.9);  /* Slight transparency for the background */
+        border-radius: 8px;  /* Rounds the corners */
+    }
+    
+
+    .intro, .instructions {
+        text-align: left;
+        width: 40%;  /* Adjust this to control the width of the boxes */
+        margin-left: 20px;  /* Push the text slightly away from the left */
+        margin-top: 100px;  /* Add space above the boxes to move them down */
+        padding: 20px;  /* Padding inside the boxes */
+        background-color: rgba(120, 120, 120, 0.9);  /* Slight transparency for the background */
+        border-radius: 8px;  /* Rounds the corners */
+    }
+    
 
 
 
