@@ -13,7 +13,7 @@
   <Description DefaultValue="A template to get started."/>
   
   <!-- Updated with public URLs -->
-  <IconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon.png"/>
+  <IconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/icon.png"/>
   <HighResolutionIconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   
