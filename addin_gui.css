@@ -6,6 +6,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Footer icon style */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-icon {
+    width: 400px;  /* Adjust the size as needed */
+    height: auto;
+    margin-top: 10px;
+}
 
 /* Style for <p> elements */
 p {
