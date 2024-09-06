@@ -1,42 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Pilot</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>P3MC Task Pane Add-in</title>
 
-    <link rel="stylesheet" href="addin_gui.css">
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- Fluent UI -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="addin_gui.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Initialization Script -->
+    <script>
+        Office.onReady(function(info) {
+            if (info.host === Office.HostType.Project) {
+                document.getElementById("app-body").style.display = "block";
+                document.getElementById("sideload-msg").style.display = "none";
+            }
+        });
+    </script>
 </head>
-<body>
-    <!-- Header with logo and title -->
-    <div class="header">
-        <img src="logo-placeholder.png" alt="Andel Projects" class="logo">
-        <span class="title">Project Pilot</span>
-    </div>
 
-    <!-- Instructions icon that opens a static HTML page -->
-    <div class="instructions" onclick="window.open('instructions.html', '_blank')">
-        <span class="instructions-icon">📖</span>
-        <span>Instructions</span>
-    </div>
-
-    <!-- Function buttons with code to open static HTML pages in new windows -->
-    <div class="btn" id="btn-extract" onclick="window.open('extract_project_data.html', '_blank')">
-        <span class="btn-icon">📊</span> Extract Project Data
-    </div>
-    <div class="btn" id="btn-assurance" onclick="window.open('run_assurance_check.html', '_blank')">
-        <span class="btn-icon">✅</span> Run Assurance Check
-    </div>
-    <div class="btn" id="btn-optimize" onclick="window.open('optimize_schedule.html', '_blank')">
-        <span class="btn-icon">📅</span> Optimize Schedule (Bayesian)
-    </div>
-    <div class="btn" id="btn-gantt" onclick="window.open('create_gantt_chart.html', '_blank')">
-        <span class="btn-icon">📈</span> Create Custom Gantt Chart
-    </div>
-
-    <!-- Footer with support link -->
-    <div class="footer">
-        Need help? <a href="mailto:support@example.com">Contact Support</a>
-    </div>
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="https://foresaa.github.io/MSTPADDIN/assets/icon.png" alt="P3MC" title="P3MC" />
+        <h1 class="ms-font-su">Welcome</h1>
+    </header>
+    
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+    </section>
+    
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
+        <ul class="ms-List ms-welcome__features">
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+                <span class="ms-font-m">Achieve more with Office integration</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
+                <span class="ms-font-m">Unlock features and functionality</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
+                <span class="ms-font-m">Create and visualize like a pro</span>
+            </li>
+        </ul>
+        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
+        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+            <span class="ms-Button-label">Run</span>
+        </div>
+        <p><label id="item-subject"></label></p>
+    </main>
 </body>
+
 </html>
