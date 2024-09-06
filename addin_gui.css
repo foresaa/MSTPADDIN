@@ -100,4 +100,21 @@ footer {
     padding: 20px;
     font-size: 0.9em;
     color: #555;
+
+    /* Align text to the left */
+.intro, .instructions {
+    text-align: left;
+    width: 40%;  /* Adjust this to make the text narrower and show more of the image */
+    margin-left: 20px;  /* Push the text away from the left edge slightly */
+}
+
+
+
+/* Footer icon style */
+.footer-icon {
+    width: 400px;  /* Adjust the size of the icon in the footer */
+    height: auto;
+    margin-top: 10px;
+}
+
 }
