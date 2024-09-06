@@ -8,13 +8,13 @@
   <!-- Updated with your valid GUID -->
   <Id>c8472c1e-992e-4c42-90ea-3f130c72dabc</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Andel Projects</ProviderName> <!-- Updated provider -->
+  <ProviderName>P3MC</ProviderName> <!-- Updated provider -->
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Project Pilot"/>
   <Description DefaultValue="A project management add-in."/>
   
   <!-- Updated URLs to GitHub Pages -->
-  <IconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-32.png"/>
+  <IconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/icon.png"/>
   <HighResolutionIconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/support"/>
   <AppDomains>
@@ -22,7 +22,7 @@
   </AppDomains>
   
   <Hosts>
-    <Host Name="Workbook"/>
+    <Host Name="Project"/>
   </Hosts>
   
   <!-- Updated SourceLocation to GitHub Pages -->
@@ -34,7 +34,7 @@
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
-      <Host xsi:type="Workbook">
+      <Host xsi:type="Project">
         <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
