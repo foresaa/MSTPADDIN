@@ -1,4 +1,23 @@
 /* Shared styles for both the landing page and the task pane */
+
+
+/* Ensure task pane uses full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Task pane-specific styles */
+.task-pane {
+    background-color: #787171;
+    background-image: url('https://foresaa.github.io/MSTPADDIN/Help.png');
+    background-size: cover; /* Maintain aspect ratio while covering the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%; /* Ensure it covers full height */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,15 +29,6 @@ body {
     background-color: #f1eaea;
     background-image: url('https://foresaa.github.io/MSTPADDIN/bkgrnd.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Task pane-specific styles */
-.task-pane {
-    background-color: #787171;
-    background-image: url('https://foresaa.github.io/MSTPADDIN/Help.png');
-    background-size: 100% 100%; /* Ensures the image fills both width and height */
     background-position: center;
     background-repeat: no-repeat;
 }
