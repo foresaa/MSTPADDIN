@@ -23,6 +23,11 @@ def startup():
     conn.commit()
     conn.close()
 
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the FastAPI app!"}
+
 # Endpoint to get all items
 @app.get("/items/")
 def read_items():
