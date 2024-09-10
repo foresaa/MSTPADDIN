@@ -26,7 +26,7 @@ def startup():
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the FastAPI app!"}
+    return {"message": "Welcome to the backend service for Project Pilot!"}
 
 # Endpoint to get all items
 @app.get("/items/")
