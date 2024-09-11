@@ -65,3 +65,28 @@ def delete_item(item_id: int):
     conn.commit()
     conn.close()
     return {"detail": "Item deleted"}
+
+# ADDIN FUNCTIONALITY ENDPOINTS
+
+#____________________________________Load Current Project Data _______________________________
+#
+# This basically executes the process of using win32 API to read the active project in MSP where the Add-In resides to 
+# load all project data temporarily into the SQLite db residing on Render as 'repository to support all further functions of th Add-In
+
+import subprocess
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.post("/load-current-project-data/")
+def load_project_data():
+    # Run the external Python script (mainEX.py)
+    try:
+        result = subprocess.run(["python", "mainEX.py"], capture_output=True, text=True)
+        if result.returncode == 0:
+            return {"message": "Project data loaded successfully!", "output": result.stdout}
+        else:
+            return {"message": "Error loading project data", "error": result.stderr}
+    except Exception as e:
+        return {"message": "An error occurred", "error": str(e)}
+#_____________________________________________________________________________________________
