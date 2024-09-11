@@ -73,10 +73,6 @@ def delete_item(item_id: int):
 # This basically executes the process of using win32 API to read the active project in MSP where the Add-In resides to 
 # load all project data temporarily into the SQLite db residing on Render as 'repository to support all further functions of th Add-In
 
-import subprocess
-from fastapi import FastAPI
-
-app = FastAPI()
 
 @app.post("/load-current-project-data/")
 def load_project_data():
