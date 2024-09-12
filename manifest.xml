@@ -3,9 +3,9 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="TaskPaneApp">
-  <Id>your-id</Id>
+  <Id>23fd6afe-8da0-476d-ac21-c91c60fc9c4d</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>YourProvider</ProviderName>
+  <ProviderName>P3MC</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Project Pilot Add-In" />
   <Description DefaultValue="Task pane with command button to load project data." />
@@ -46,10 +46,6 @@
                     <Title resid="customButtonTitle" />
                     <Description resid="customButtonDescription" />
                   </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="icon16" />
-                    <bt:Image size="32" resid="icon32" />
-                  </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>runPythonTask</FunctionName>
                   </Action>
