@@ -1,70 +1,57 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
-  
-  <!-- Updated with your valid GUID -->
-  <Id>c8472c1e-992e-4c42-90ea-3f130c72dabc</Id>
+  <Id>your-id</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>P3MC</ProviderName> <!-- Updated provider -->
+  <ProviderName>YourProvider</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Project Pilot"/>
-  <Description DefaultValue="A project management add-in."/>
-  
-  <!-- Updated URLs to GitHub Pages -->
-  <IconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/icon.png"/>
-  <HighResolutionIconUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://foresaa.github.io/MSTPADDIN/support"/>
+  <DisplayName DefaultValue="Project Pilot Add-In" />
+  <Description DefaultValue="Task pane with command button to load project data." />
   <AppDomains>
-    <AppDomain>https://foresaa.github.io</AppDomain>
+    <AppDomain>https://mstpaddin.onrender.com</AppDomain>
   </AppDomains>
-  
+
   <Hosts>
-    <Host Name="Workbook"/>
+    <Host xsi:type="Project" />
   </Hosts>
-  
-  <!-- Updated SourceLocation to GitHub Pages -->
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="TaskPane" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://foresaa.github.io/MSTPADDIN/addin_gui.html"/>
+    <SourceLocation DefaultValue="https://foresaa.github.io/MSTPADDIN/taskpane.html" />
+    <RequestedWidth>250</RequestedWidth>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides>
     <Hosts>
-      <Host xsi:type="Workbook">
+      <Host xsi:type="Project">
         <DesktopFormFactor>
-          <GetStarted>
-            <Title resid="GetStarted.Title"/>
-            <Description resid="GetStarted.Description"/>
-            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
-          </GetStarted>
-          <FunctionFile resid="Commands.Url"/>
+          <FunctionFile resid="functionFile" />
+
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
-              <Group id="CommandsGroup">
-                <Label resid="CommandsGroup.Label"/>
-                <Icon>
-                  <bt:Image size="16" resid="Icon.16x16"/>
-                  <bt:Image size="32" resid="Icon.32x32"/>
-                  <bt:Image size="80" resid="Icon.80x80"/>
-                </Icon>
-                <Control xsi:type="Button" id="TaskpaneButton">
-                  <Label resid="TaskpaneButton.Label"/>
+              <Group id="MyCustomGroup" label="Project Pilot">
+                <Label resid="customGroupLabel" />
+                <Control xsi:type="Button" id="runPythonTaskButton">
+                  <Label resid="customButtonLabel" />
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
-                    <Description resid="TaskpaneButton.Tooltip"/>
+                    <Title resid="customButtonTitle" />
+                    <Description resid="customButtonDescription" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
+                    <bt:Image size="16" resid="icon16" />
+                    <bt:Image size="32" resid="icon32" />
                   </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
-                    <SourceLocation resid="Taskpane.Url"/>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>runPythonTask</FunctionName>
                   </Action>
                 </Control>
               </Group>
@@ -73,30 +60,5 @@
         </DesktopFormFactor>
       </Host>
     </Hosts>
-    
-    <Resources>
-      <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://foresaa.github.io/MSTPADDIN/assets/icon-80.png"/>
-      </bt:Images>
-      
-      <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://foresaa.github.io/MSTPADDIN/help.html"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://foresaa.github.io/MSTPADDIN/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://foresaa.github.io/MSTPADDIN/addin_gui.html"/>
-      </bt:Urls>
-      
-      <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with Project Pilot!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
-      </bt:ShortStrings>
-      
-      <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your Project Pilot add-in loaded successfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to show the taskpane"/>
-      </bt:LongStrings>
-    </Resources>
   </VersionOverrides>
 </OfficeApp>
