@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Pane</title>
-    <script src="functions.js"></script>
-    <!-- Include your JavaScript for button actions -->
+    <title>Project Pilot Task Pane</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        padding: 20px;
+      }
+      button {
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to Project Pilot</h1>
+    <div class="container">
+      <h1>Welcome to Project Pilot</h1>
+      <button id="runPythonTaskButton">Run Python Task</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("runPythonTaskButton")
+        .addEventListener("click", function () {
+          fetch("https://mstpaddin.onrender.com/load-current-project-data/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+    </script>
   </body>
 </html>
